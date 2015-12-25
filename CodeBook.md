@@ -25,31 +25,110 @@ For each record in the dataset it is provided:
 
 # Data Creation Process 
 
-##Data Merge
+1.Download the dataset and unzip the file. 
+2.Load the activity labels and features. 
+3.Load both the training and test data sets, keeping only those columns with a mean or a standard deviation.
+4.Load the activity and subject data for each data set, and merge those columns with the dataset.
+5.Merge the test and train data sets.
+6.Convert the  activity  and  subject  columns into factors.
+7.Using the melt command, create a tidy data set that consists of the mean value of each variable 
+  for each subject and activity.
 
-Read data from files : features, activityType, subjectTrain, xTrain, yTrain .
-Assign column names to the data.
-Create final training set by merging yTrain, subjectTrain, and xTrain.
-Similarly, read test data from subject_Test, xTest, yTest, and assign column names to the test data.
-Create the final test set by merging the xTest, yTest and subjectTest data.
-Finally, combine training and test data sets to create a final data set. 
+## Final Data (tidy_data.txt) Variable List 
 
-## Mean and Std Dev Extraction
+# Identifier Variable
+subject  - test subject ID
 
-Create a logical vector that contains TRUE values for the ID, mean and std dev columns and FALSE values for the others. 
-Extract TRUE values to get required data. 
+# Activity Variable 
+activity  - activity type performed when the corresponding measurements were taken
+   - 1. WALKING : subject was walking during the test
+   - 2. WALKING_UPSTAIRS : subject was walking up a staircase during the test
+   - 3. WALKING_DOWNSTAIRS : subject was walking down a staircase during the test
+   - 4. SITTING : subject was sitting during the test
+   - 5. STANDING : subject was standing during the test
+   - 6 LAYING : subject was laying down during the test
 
-## Use of descriptive activity names
+# Measurement Variables
+tBodyAccMeanX 
+tBodyAccMeanY 
+tBodyAccMeanZ 
+tBodyAccStdX 
+tBodyAccStdY 
+tBodyAccStdZ 
+tGravityAccMeanX 
+tGravityAccMeanY 
+tGravityAccMeanZ 
+tGravityAccStdX 
+tGravityAccStdY 
+tGravityAccStdZ 
+tBodyAccJerkMeanX 
+tBodyAccJerkMeanY 
+tBodyAccJerkMeanZ 
+tBodyAccJerkStdX 
+tBodyAccJerkStdY 
+tBodyAccJerkStdZ 
+tBodyGyroMeanX 
+tBodyGyroMeanY 
+tBodyGyroMeanZ 
+tBodyGyroStdX 
+tBodyGyroStdY 
+tBodyGyroStdZ 
+tBodyGyroJerkMeanX 
+tBodyGyroJerkMeanY 
+tBodyGyroJerkMeanZ 
+tBodyGyroJerkStdX 
+tBodyGyroJerkStdY 
+tBodyGyroJerkStdZ 
+tBodyAccMagMean 
+tBodyAccMagStd 
+tGravityAccMagMean 
+tGravityAccMagStd 
+tBodyAccJerkMagMean 
+tBodyAccJerkMagStd 
+tBodyGyroMagMean 
+tBodyGyroMagStd 
+tBodyGyroJerkMagMean 
+tBodyGyroJerkMagStd 
+fBodyAccMeanX 
+fBodyAccMeanY 
+fBodyAccMeanZ 
+fBodyAccStdX 
+fBodyAccStdY 
+fBodyAccStdZ 
+fBodyAccMeanFreqX 
+fBodyAccMeanFreqY 
+fBodyAccMeanFreqZ 
+fBodyAccJerkMeanX 
+fBodyAccJerkMeanY 
+fBodyAccJerkMeanZ 
+fBodyAccJerkStdX 
+fBodyAccJerkStdY 
+fBodyAccJerkStdZ 
+fBodyAccJerkMeanFreqX 
+fBodyAccJerkMeanFreqY 
+fBodyAccJerkMeanFreqZ 
+fBodyGyroMeanX 
+fBodyGyroMeanY 
+fBodyGyroMeanZ 
+fBodyGyroStdX 
+fBodyGyroStdY 
+fBodyGyroStdZ 
+fBodyGyroMeanFreqX 
+fBodyGyroMeanFreqY 
+fBodyGyroMeanFreqZ 
+fBodyAccMagMean 
+fBodyAccMagStd 
+fBodyAccMagMeanFreq 
+fBodyBodyAccJerkMagMean 
+fBodyBodyAccJerkMagStd 
+fBodyBodyAccJerkMagMeanFreq 
+fBodyBodyGyroMagMean 
+fBodyBodyGyroMagStd 
+fBodyBodyGyroMagMeanFreq 
+fBodyBodyGyroJerkMagMean 
+fBodyBodyGyroJerkMagStd 
+fBodyBodyGyroJerkMagMeanFreq 
 
-Merge the final_Data set with the activityType table to include descriptive activity names.
-Update the col_Names vector to include the new column names after merge.
-
-## Appropriate labels of the data 
-
-Clean variable names using gsub function. 
-The final data set contains the average of each veriable for each activity and subject
-
-# Variables in the final data set (tidy_Data.txt)
 
 
 
