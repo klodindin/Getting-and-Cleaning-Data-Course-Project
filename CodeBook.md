@@ -34,12 +34,12 @@ For each record in the dataset, it is provided:
 7.Using the melt command, create a tidy data set that consists of the mean value of each variable 
   for each subject and activity.
 
-## Final Data (tidy_data.txt) Variable List 
+# Final Data (tidy_data.txt) Variable List 
 
-# Identifier Variable
+## Identifier Variable
 subject  - test subject ID
 
-# Activity Variable 
+## Activity Variable 
 activity  - activity type performed when the corresponding measurements were taken
 activity labels : 
    - 1. WALKING : subject was walking during the test
@@ -49,7 +49,7 @@ activity labels :
    - 5. STANDING : subject was standing during the test
    - 6 LAYING : subject was laying down during the test
 
-# Measurement Variables
+## Measurement Variables
 tBodyAccMeanX 
 tBodyAccMeanY 
 tBodyAccMeanZ 
