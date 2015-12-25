@@ -16,7 +16,7 @@ variables from the time and frequency domain.
 
 # Attribute Information:
 
-For each record in the dataset it is provided: 
+For each record in the dataset, it is provided: 
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
 - Triaxial Angular velocity from the gyroscope. 
 - A 561-feature vector with time and frequency domain variables. 
@@ -41,6 +41,7 @@ subject  - test subject ID
 
 # Activity Variable 
 activity  - activity type performed when the corresponding measurements were taken
+activity labels : 
    - 1. WALKING : subject was walking during the test
    - 2. WALKING_UPSTAIRS : subject was walking up a staircase during the test
    - 3. WALKING_DOWNSTAIRS : subject was walking down a staircase during the test
