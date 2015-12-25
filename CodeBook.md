@@ -14,7 +14,7 @@ acceleration and gravity. The gravitational force is assumed to have only low fr
 filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating 
 variables from the time and frequency domain.
 
-# Attribute Information:
+# Attribute Information
 
 For each record in the dataset, it is provided: 
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
