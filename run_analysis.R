@@ -5,20 +5,20 @@ setwd('C:/Users/herncl02/Documents/COURSERA/getdata_projectfiles_UCI HAR Dataset
 
 library(reshape2) 
 
-# Load activity labels and features data
+# Read activity labels and features data
 activityLabels <- read.table("activity_labels.txt") 
 activityLabels[,2] <- as.character(activityLabels[,2]) 
 features <- read.table("features.txt") 
 features[,2] <- as.character(features[,2]) 
  
-# Extract only the data with mean and standard deviation 
+# Load only the data with mean and standard deviation 
 featuresWanted <- grep(".*mean.*|.*std.*", features[,2]) 
 featuresWanted_names <- features[featuresWanted,2] 
 featuresWanted_names = gsub('-mean', 'Mean', featuresWanted_names) 
 featuresWanted_names = gsub('-std', 'Std', featuresWanted_names) 
 featuresWanted_names <- gsub('[-()]', '', featuresWanted_names) 
 
-# Load the datasets 
+# Read the test and train data sets 
 train <- read.table("train/X_train.txt")[featuresWanted] 
 train_Activities <- read.table("train/Y_train.txt") 
 train_Subjects <- read.table("train/subject_train.txt") 
@@ -29,11 +29,11 @@ test_Activities <- read.table("test/Y_test.txt")
 test_Subjects <- read.table("test/subject_test.txt") 
 test <- cbind(test_Subjects, test_Activities, test) 
 
-# Merge datasets and add labels 
+# Merge data sets and add labels 
 all_Data <- rbind(train, test) 
 colnames(all_Data) <- c("subject", "activity", featuresWanted_names) 
 
-# Convert activities & subjects into factors 
+# Convert activities and subjects into factors 
 all_Data$activity <- factor(all_Data$activity, levels = activityLabels[,1], labels = activityLabels[,2]) 
 all_Data$subject <- as.factor(all_Data$subject) 
  
