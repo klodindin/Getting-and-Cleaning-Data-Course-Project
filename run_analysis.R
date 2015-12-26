@@ -5,7 +5,7 @@ setwd('C:/Users/herncl02/Documents/COURSERA/getdata_projectfiles_UCI HAR Dataset
 
 library(reshape2) 
 
-# Load activity labels + features 
+# Load activity labels and features data
 activityLabels <- read.table("activity_labels.txt") 
 activityLabels[,2] <- as.character(activityLabels[,2]) 
 features <- read.table("features.txt") 
