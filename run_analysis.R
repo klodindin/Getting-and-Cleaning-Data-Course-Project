@@ -1,4 +1,6 @@
 
+#Download the data and unzip the file. 
+
 install.packages("reshape2")
 
 setwd('C:/Users/herncl02/Documents/COURSERA/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset')
